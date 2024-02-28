@@ -1,8 +1,8 @@
 import { Menu } from "lucide-react";
 import Logo from "../assets/LogoJP.svg";
 import SideBar from "./sidebar";
-import Socials from "./socials";
 import { Link } from "react-router-dom";
+import Img_LogoUfu from "../assets/LogoUfu.png";
 
 interface IHeaderProps {
   isOpen: boolean;
@@ -54,7 +54,14 @@ const Header = ({ isOpen, setisOpen, scrollToSection }: IHeaderProps) => {
             />
           </div>
           <div className="w-full flex justify-center md:block ">
-            <img src={Logo} alt="" />
+            <Link to="/">
+              <img
+                width={200}
+                height={200}
+                src={Logo}
+                alt="Logo dos jovens programadores"
+              />
+            </Link>
           </div>
           <div className="w-full hidden md:block lg:flex justify-end gap-4">
             <ul className="flex items-center gap-4">
@@ -78,7 +85,12 @@ const Header = ({ isOpen, setisOpen, scrollToSection }: IHeaderProps) => {
               ))}
             </ul>
             <div className="flex md:hidden lg:block">
-              <Socials />
+              <img
+                width={200}
+                height={200}
+                src={Img_LogoUfu}
+                alt="Logo da universidade federal de uberlandia"
+              />
             </div>
           </div>
         </div>

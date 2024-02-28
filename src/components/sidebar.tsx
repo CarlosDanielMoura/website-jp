@@ -1,6 +1,6 @@
 import { X } from "lucide-react";
 import { Link } from "react-router-dom";
-
+import Img_LogoUfu from "../assets/LogoUfu.png";
 interface ISideBarProps {
   isOpen: boolean;
   setisOpen: (value: boolean) => void;
@@ -51,7 +51,7 @@ const SideBar = ({ isOpen, setisOpen, scrollToSection }: ISideBarProps) => {
           />
         </div>
       </header>
-      <main className="w-full flex h-full justify-center items-center mt-10">
+      <main className="w-full flex flex-col h-full justify-around items-center mt-10">
         <nav className="w-full flex flex-col items-center">
           <ul className="flex flex-col gap-9 list-none justify-between">
             {navagationItem.map((item, index) => (
@@ -65,6 +65,14 @@ const SideBar = ({ isOpen, setisOpen, scrollToSection }: ISideBarProps) => {
             ))}
           </ul>
         </nav>
+        <div className="w-full flex justify-center">
+          <img
+            src={Img_LogoUfu}
+            width={200}
+            height={200}
+            alt="Logo universidade federal de uberlandia"
+          />
+        </div>
       </main>
     </div>
   );

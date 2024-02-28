@@ -10,7 +10,7 @@ const CardSmallContent = ({ text, ...rest }: ICardSmallContentProps) => {
     <p
       {...rest}
       className={twMerge(
-        "font-Inter font-bold text-lg mt-4 w-full text-center p-3",
+        "font-Inter font-bold text-base mt-4 w-full text-center p-3",
         rest.className
       )}
     >

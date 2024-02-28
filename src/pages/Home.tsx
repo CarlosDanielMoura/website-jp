@@ -88,9 +88,13 @@ const Home = () => {
                           />
                           <Divider className="w-3/4 md:block" />
                           <div className="flex flex-col py-3 ml-6 gap-2">
-                            <CardBigContent content={item.schedule[0]} />
+                            <CardBigContent
+                              content={`${item.schedule[0]} - ${item.class[0]}`}
+                            />
                             {item.schedule[1] && (
-                              <CardBigContent content={item.schedule[1]} />
+                              <CardBigContent
+                                content={`${item.schedule[1]} - ${item.class[1]}`}
+                              />
                             )}
                           </div>
                           <CardBigContent
@@ -109,7 +113,19 @@ const Home = () => {
                               <CardBigContent content={tech} />
                             </div>
                           ))}
-                          <Button.Root>Inscrever</Button.Root>
+                          <CardBigContent
+                            className="font-bold text-left text-xl font-Inter mt-4"
+                            content="Faixa Etária"
+                          />
+
+                          <Divider className="w-3/4 md:block" />
+                          <div className="flex flex-col py-3 ml-6 gap-2">
+                            <CardBigContent content={item.age_range} />
+                          </div>
+
+                          <Button.Root>
+                            Em breve - A partir de 04/03/24 às 10:00
+                          </Button.Root>
                         </div>
                         <div className="flex flex-1  mt-10">
                           <CardBig.Image
@@ -143,9 +159,13 @@ const Home = () => {
                           />
                           <Divider className="w-3/4 md:block" />
                           <div className="flex flex-col py-3 ml-6 gap-2">
-                            <CardBigContent content={item.schedule[0]} />
+                            <CardBigContent
+                              content={`${item.schedule[0]} - ${item.class[0]}`}
+                            />
                             {item.schedule[1] && (
-                              <CardBigContent content={item.schedule[1]} />
+                              <CardBigContent
+                                content={`${item.schedule[1]} - ${item.class[1]}`}
+                              />
                             )}
                           </div>
                           <CardBigContent
@@ -164,7 +184,18 @@ const Home = () => {
                               <CardBigContent content={tech} />
                             </div>
                           ))}
-                          <Button.Root>Inscrever</Button.Root>
+                          <CardBigContent
+                            className="font-bold text-left text-xl font-Inter mt-4"
+                            content="Faixa Etária"
+                          />
+
+                          <Divider className="w-3/4 md:block" />
+                          <div className="flex flex-col py-3 ml-6 gap-2">
+                            <CardBigContent content={item.age_range} />
+                          </div>
+                          <Button.Root>
+                            Em breve - A partir de 04/03/24 às 10:00
+                          </Button.Root>
                         </div>
                       </>
                     )}

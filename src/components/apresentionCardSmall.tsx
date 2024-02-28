@@ -22,7 +22,7 @@ const ApresentionCardSmall = ({ scrollToSection }: IApresentionCardSmall) => {
     {
       id: uuidv4(),
       image: Img_DevWeb,
-      text: "Desenvolvimento Web",
+      text: "Desenvolvimento de Site",
       id_search: "course_web",
     },
     {

@@ -4,6 +4,8 @@ import Img_Teams_Fernanda from "../assets/teams/Teams_Fernanda.svg";
 import Img_Teams_Ana_Claudia from "../assets/teams/Teams_Ana_Claudia.svg";
 import Img_Teams_Adriano from "../assets/teams/Teams_Adriano.svg";
 import Img_Teams_Alessandra from "../assets/teams/Teams_Alessandra.svg";
+import Img_Teams_Diego from "../assets/teams/Teams_Diego.jpeg";
+import Img_Teams_Daniel from "../assets/teams/Teams_Daniel.jpeg";
 import Patner from "../components/patner";
 import Footer from "../components/footer";
 import { Fade } from "react-awesome-reveal";
@@ -52,14 +54,19 @@ const About = () => {
       img: Img_Teams_Ana_Claudia,
     },
     {
-      name: "Adriano Mendonça Rocha",
+      name: "Daniel Stefany Duarte Caetano",
       role: "Coordenador do projeto EDUCAGAME",
-      img: Img_Teams_Adriano,
+      img: Img_Teams_Daniel,
     },
     {
       name: "Alessandra Aparecida Paulino",
       role: "Coordenadora do projeto Desenvolvimento Web",
       img: Img_Teams_Alessandra,
+    },
+    {
+      name: "Diego Nunes Molinos",
+      role: "Coordenador do projeto Robótica ",
+      img: Img_Teams_Diego,
     },
   ];
 

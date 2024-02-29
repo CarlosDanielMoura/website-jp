@@ -2,7 +2,6 @@ import { useState } from "react";
 import Header from "../components/header";
 import Img_Teams_Fernanda from "../assets/teams/Teams_Fernanda.svg";
 import Img_Teams_Ana_Claudia from "../assets/teams/Teams_Ana_Claudia.svg";
-import Img_Teams_Adriano from "../assets/teams/Teams_Adriano.svg";
 import Img_Teams_Alessandra from "../assets/teams/Teams_Alessandra.svg";
 import Img_Teams_Diego from "../assets/teams/Teams_Diego.jpeg";
 import Img_Teams_Daniel from "../assets/teams/Teams_Daniel.jpeg";

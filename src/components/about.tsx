@@ -1,5 +1,6 @@
 import Divider from "../components/divider";
 import icon_toptico from "../assets/icons/Icons-topicos.svg";
+import { Link } from "react-router-dom";
 
 const About = () => {
   return (
@@ -54,6 +55,23 @@ const About = () => {
                   as crianças a se tornarem mais independentes e autônomas,
                   permitindo-lhes resolver problemas e enfrentar desafios
                   tecnológicos por conta própria.
+                </span>
+              </li>
+              <li className="flex items-start gap-3 t">
+                <img src={icon_toptico} alt="icone de topicos" />
+                <span className="text-sm">
+                  Para saber os horários dos coletivos da cidade de Monte
+                  Carmelo, acesse o site da prefeitura:
+                  <br />
+                  <Link
+                    to={
+                      "https://montecarmelomg.appcidades.com.br/start/services/transport/1"
+                    }
+                    className="text-blue-500 hover:underline cursor-pointer transition-all duration-300 ease-in-out hover:scale-105 hover:font-bold leading-5"
+                    target="_blank"
+                  >
+                    Clique aqui
+                  </Link>
                 </span>
               </li>
             </ul>

@@ -15,16 +15,42 @@ import Patner from "../components/patner";
 import Footer from "../components/footer";
 import { data } from "../utils/cardBigData";
 import Header from "../components/header";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const Home = () => {
+  const [buttonText, setButtonText] = useState(
+    "Matrículas a partir de 04/03 às 10:00"
+  );
+  const [intervalId, setIntervalId] = useState(0);
   const [isOpen, setisOpen] = useState(false);
+  const [isDisable, setIsDisable] = useState(true);
+
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
     }
   };
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const currentDate = new Date();
+      const targetDate = new Date("2024-03-04T10:00:00");
+
+      if (currentDate > targetDate) {
+        setButtonText("Faça sua inscrição");
+        setIsDisable(false);
+        clearInterval(interval);
+      }
+    }, 1000);
+
+    setIntervalId(interval);
+
+    return () => {
+      clearInterval(intervalId);
+    };
+  }, []);
 
   return (
     <div className="w-full flex flex-col items-center">
@@ -122,10 +148,11 @@ const Home = () => {
                           <div className="flex flex-col py-3 ml-6 gap-2">
                             <CardBigContent content={item.age_range} />
                           </div>
-
-                          <Button.Root>
-                            Em breve - A partir de 04/03/24 às 10:00
-                          </Button.Root>
+                          <Link to={`${item.link_register}`} target="_blank">
+                            <Button.Root disable={isDisable}>
+                              {buttonText}
+                            </Button.Root>
+                          </Link>
                         </div>
                         <div className="flex flex-1  mt-10">
                           <CardBig.Image
@@ -193,9 +220,11 @@ const Home = () => {
                           <div className="flex flex-col py-3 ml-6 gap-2">
                             <CardBigContent content={item.age_range} />
                           </div>
-                          <Button.Root>
-                            Em breve - A partir de 04/03/24 às 10:00
-                          </Button.Root>
+                          <Link to={`${item.link_register}`} target="_blank">
+                            <Button.Root disable={isDisable}>
+                              {buttonText}
+                            </Button.Root>
+                          </Link>
                         </div>
                       </>
                     )}

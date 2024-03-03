@@ -17,6 +17,7 @@ export const data = [
     age_range: "13 anos ao Ensino Médio",
     img: Img_PY,
     id_search: "course_python",
+    link_register: "https://forms.office.com/r/R7jn7RNAfv?origin=lprLink",
   },
   {
     title: "Desenvolvimento de Site",
@@ -28,6 +29,7 @@ export const data = [
     age_range: "13 anos ao Ensino Médio",
     img: Img_WEb,
     id_search: "course_web",
+    link_register: "https://forms.office.com/r/UvEuDi6yZn",
   },
   {
     title: "Educa Game",
@@ -42,6 +44,7 @@ export const data = [
     technologies: ["Scratch", "RPG Playground"],
     img: Img_Educa,
     id_search: "course_educa",
+    link_register: "https://forms.office.com/r/1sn9NW1ZZ9?origin=lprLink",
   },
 
   {
@@ -57,6 +60,7 @@ export const data = [
     technologies: ["Scratch"],
     img: Img_PY,
     id_search: "course_tech_kids",
+    link_register: "https://forms.office.com/r/F1gw0gKm2i?origin=lprLink",
   },
   // {
   //   title: "Inclusão Digital",
@@ -77,5 +81,6 @@ export const data = [
     age_range: "9° ano ao ensino médio",
     img: Img_Robotica,
     id_search: "course_robotica",
+    link_register: "https://forms.office.com/r/CRRzN9NkfW?origin=lprLink",
   },
 ];
